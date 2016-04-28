@@ -53,7 +53,7 @@ public class LoadData {
                     result.setExpLPI(Double.parseDouble(stringsInLine[8]));
                     result.setXk(Double.parseDouble(stringsInLine[9]));
                     result.setValues(LoadData.values(LoadData.getValueFileForResult(fileName)));
-                       
+                       dataList.add(result);
                 }
             }
         } catch (FileNotFoundException ex) {

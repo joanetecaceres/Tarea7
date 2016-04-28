@@ -36,10 +36,10 @@ public class Main {
     
     get("/calculations", (req, res) -> {
         
-        final String FILE_NAME_1 = "result1.txt";
-        final String FILE_NAME_2 = "result2.txt";
-        final String FILE_NAME_3 = "result3.txt";
-        final String FILE_NAME_4 = "result4.txt";
+        final String FILE_NAME_1 = "src/result1.txt";
+        final String FILE_NAME_2 = "src/result2.txt";
+        final String FILE_NAME_3 = "src/result3.txt";
+        final String FILE_NAME_4 = "src/result4.txt";
         final String[] FILE_NAMES = {FILE_NAME_1, FILE_NAME_2, FILE_NAME_3, FILE_NAME_4};
         
         List<Result> data = new ArrayList<>();
@@ -47,9 +47,10 @@ public class Main {
         
         for(String fileName : FILE_NAMES) {
             data = controller.loadClassInfo(fileName);
+        controller.showAnswer(data);
         }
         
-        return controller.showAnswer(data);
+     return controller.showAnswer(data);
     });
 
   }

@@ -1,0 +1,226 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Model;
+
+import java.util.ArrayList;
+import java.util.List;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author Carolina Caceres
+ */
+public class CalculationResultTest {
+    
+    public CalculationResultTest() {
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
+    }
+
+    /**
+     * Test of getCorrelationSquareR method, of class CalculationResult.
+     */
+    @Test
+    public void testGetCorrelationSquareR() {
+        System.out.println("getCorrelationSquareR");
+        List<ValuePair> values = new ArrayList<>();
+        values.add(new ValuePair(130, 15));
+        values.add(new ValuePair(650, 69.9));
+        values.add(new ValuePair(99, 6.5));
+        values.add(new ValuePair(150, 22.4));
+        values.add(new ValuePair(128, 28.4));
+        values.add(new ValuePair(302, 65.9));
+        values.add(new ValuePair(95, 19.4));
+        values.add(new ValuePair(945, 198.7));
+        values.add(new ValuePair(368, 38.8));
+        values.add(new ValuePair(961, 138.2));
+        
+        Result instance = new Result();
+        instance.setValues(values);
+        double expResult = 0.91106;
+        double result = instance.getCorrelationSquareR();
+        assertEquals(expResult, result, 0.2);
+    }
+
+    /**
+     * Test of getRegressionB0 method, of class CalculationResult.
+     */
+    @Test
+    public void testGetRegressionB0() {
+        System.out.println("getRegressionB0");
+        
+        List<ValuePair> values = new ArrayList<>();
+        values.add(new ValuePair(130, 15));
+        values.add(new ValuePair(650, 69.9));
+        values.add(new ValuePair(99, 6.5));
+        values.add(new ValuePair(150, 22.4));
+        values.add(new ValuePair(128, 28.4));
+        values.add(new ValuePair(302, 65.9));
+        values.add(new ValuePair(95, 19.4));
+        values.add(new ValuePair(945, 198.7));
+        values.add(new ValuePair(368, 38.8));
+        values.add(new ValuePair(961, 138.2));
+        
+        Result instance = new Result();
+        instance.setValues(values);
+        double expResult = -4.038881574687551;
+        double result = instance.getRegressionB0();
+        assertEquals(expResult, result, 0.2);
+    }
+
+    /**
+     * Test of getYK method, of class CalculationResult.
+     */
+    @Test
+    public void testGetYK() {
+        System.out.println("getYK");
+        
+        List<ValuePair> values = new ArrayList<>();
+        values.add(new ValuePair(130, 15));
+        values.add(new ValuePair(650, 69.9));
+        values.add(new ValuePair(99, 6.5));
+        values.add(new ValuePair(150, 22.4));
+        values.add(new ValuePair(128, 28.4));
+        values.add(new ValuePair(302, 65.9));
+        values.add(new ValuePair(95, 19.4));
+        values.add(new ValuePair(945, 198.7));
+        values.add(new ValuePair(368, 38.8));
+        values.add(new ValuePair(961, 138.2));
+        
+        Result instance = new Result();
+        instance.setValues(values);
+        instance.setXk(386.0);
+        double expResult = 60.8580052;
+        double result = instance.getYK();
+        assertEquals(expResult, result, 0.2);
+    }
+
+    /**
+     * Test of getCorrelationSignificance method, of class CalculationResult.
+     */
+    @Test
+    public void testGetCorrelationSignificance() {
+        System.out.println("getCorrelationSignificance");
+        List<ValuePair> values = new ArrayList<>();
+        values.add(new ValuePair(130, 15));
+        values.add(new ValuePair(650, 69.9));
+        values.add(new ValuePair(99, 6.5));
+        values.add(new ValuePair(150, 22.4));
+        values.add(new ValuePair(128, 28.4));
+        values.add(new ValuePair(302, 65.9));
+        values.add(new ValuePair(95, 19.4));
+        values.add(new ValuePair(945, 198.7));
+        values.add(new ValuePair(368, 38.8));
+        values.add(new ValuePair(961, 138.2));
+        
+        Result instance = new Result();
+        instance.setXk(386.0);
+        instance.setValues(values);
+        double expResult = 1.77517E-05;
+        double result = instance.getCorrelationSignificance();
+        assertEquals(expResult, result, 0.2);
+        // TODO review the generated test code and remove the default call to fail.
+    }
+
+    /**
+     * Test of getRange method, of class CalculationResult.
+     */
+    @Test
+    public void testGetRange() {
+        System.out.println("getRange");
+        List<ValuePair> values = new ArrayList<>();
+        values.add(new ValuePair(130, 15));
+        values.add(new ValuePair(650, 69.9));
+        values.add(new ValuePair(99, 6.5));
+        values.add(new ValuePair(150, 22.4));
+        values.add(new ValuePair(128, 28.4));
+        values.add(new ValuePair(302, 65.9));
+        values.add(new ValuePair(95, 19.4));
+        values.add(new ValuePair(945, 198.7));
+        values.add(new ValuePair(368, 38.8));
+        values.add(new ValuePair(961, 138.2));
+        
+        Result instance = new Result();
+        instance.setValues(values);
+        instance.setXk(386.0);
+        double expResult = 27.5517;
+        double result = instance.getRange();
+        assertEquals(expResult, result, 0.2);
+    }
+    
+    /**
+     * Test of getUPI method, of class CalculationResult.
+     */
+    @Test
+    public void testGetUPI() {
+        System.out.println("getUPI");
+        List<ValuePair> values = new ArrayList<>();
+        values.add(new ValuePair(130, 15));
+        values.add(new ValuePair(650, 69.9));
+        values.add(new ValuePair(99, 6.5));
+        values.add(new ValuePair(150, 22.4));
+        values.add(new ValuePair(128, 28.4));
+        values.add(new ValuePair(302, 65.9));
+        values.add(new ValuePair(95, 19.4));
+        values.add(new ValuePair(945, 198.7));
+        values.add(new ValuePair(368, 38.8));
+        values.add(new ValuePair(961, 138.2));
+        
+        Result instance = new Result();
+        instance.setValues(values);
+        instance.setXk(386.0);
+        
+        double expResult = 88.41565276;
+        double result = instance.getUPI();
+        assertEquals(expResult, result, 0.2);
+    }
+    
+    /**
+     * Test of getUPI method, of class CalculationResult.
+     */
+    @Test
+    public void testGetLPI() {
+        System.out.println("getLPI");
+        List<ValuePair> values = new ArrayList<>();
+        values.add(new ValuePair(130, 15));
+        values.add(new ValuePair(650, 69.9));
+        values.add(new ValuePair(99, 6.5));
+        values.add(new ValuePair(150, 22.4));
+        values.add(new ValuePair(128, 28.4));
+        values.add(new ValuePair(302, 65.9));
+        values.add(new ValuePair(95, 19.4));
+        values.add(new ValuePair(945, 198.7));
+        values.add(new ValuePair(368, 38.8));
+        values.add(new ValuePair(961, 138.2));
+        
+        Result instance = new Result();
+        instance.setValues(values);
+        instance.setXk(386.0);
+        
+        double expResult = 33.3003578;
+        double result = instance.getLPI();
+        assertEquals(expResult, result, 0.2);
+    }
+}

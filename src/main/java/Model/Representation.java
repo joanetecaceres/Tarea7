@@ -21,9 +21,9 @@ public class Representation {
     static public String htmlRepresentation(List<Result> results) {
         
         String htmlRepresentation = "<table><tr><td> Resultado </td></tr> ";
-        
-        for(int j = 1 ; j < results.size() ;j++ ){         
-            
+        int j=0;
+        //for(int j = 1 ; j < results.size() ;j++ ){         
+         
             htmlRepresentation +="<tr><td>";
             htmlRepresentation += "Caso de Prueba " + j;            
             htmlRepresentation +="</td></tr>";      
@@ -64,7 +64,7 @@ public class Representation {
             htmlRepresentation +="LPI (70%): " +  results.get(j).getLPI();            
             htmlRepresentation +="</td></tr>";    
             
-        }       
+        //}       
         
         htmlRepresentation +="</table>";
         
