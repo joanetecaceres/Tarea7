@@ -19,7 +19,7 @@ $ heroku local web
 ## Heroku
 
 To access the application on heroku go to the following link:
-https://desolate-woodland-81976.herokuapp.com/FindValueX
+https://fast-cliffs-24228.herokuapp.com/calculations
 
 
 ##Javadoc
